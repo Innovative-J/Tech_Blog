@@ -1,7 +1,8 @@
+// importing sequelize
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-
+// Initialize Sequelize with environment variables
 const sequelize = process.env.DB_URL
   ? new Sequelize(process.env.DB_URL)
   : new Sequelize(

@@ -1,3 +1,5 @@
+// Importing modules Model and DataTypes from sequelize
+
 const { Model, DataTypes, INTEGER } = require("sequelize");
 const sequelize = require("../config/connections");
 

@@ -1,7 +1,8 @@
+// Importing modules Model and DataTypes from sequelize
 const {Model, DataTypes} = require ('sequelize');
 const sequelize = require('../config/connections');
 
-
+// defining post class extending sequelize model
 class Post extends Model {}
 
 Post.init (
