@@ -13,6 +13,15 @@ const userData = [
   },
 ];
 
-const seedUsers = () => User.bulkCreate(userData);
 
-module.exports = seedUsers;
+const seedUsers = async () => {
+  try {
+    await User.bulkCreate(userData, {
+      individualHooks: true, 
+    });
+    console.log('Users seeded successfully!');
+  } catch (error) {
+    console.error('Error seeding users:', error);
+  }
+};
+module.export = seedUsers;

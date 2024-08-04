@@ -13,6 +13,12 @@ const commentData = [
   },
 ];
 
-const seedComments = () => Comment.bulkCreate(commentData);
-
+const seedComments = async () => {
+  try {
+    await Comment.bulkCreate(commentData);
+    console.log('Comments seeded successfully!');
+  } catch (error) {
+    console.error('Error seeding comments:', error);
+  }
+};
 module.exports = seedComments;

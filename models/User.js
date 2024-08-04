@@ -1,5 +1,5 @@
 // Importing modules Model and DataTypes from sequelize, bcrypt for password hashing, and sequelize instance from config
-const {Model, DataTypes} = require ('sequelize');
+const { Model, DataTypes } = require ('sequelize');
 const bcrypt = require ('bcrypt')
 const sequelize = require('../config/connections')
 
@@ -56,7 +56,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'User',
     }
 
 );
